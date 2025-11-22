@@ -5,7 +5,7 @@ import { OrnamentalReveal } from "./OrnamentalReveal";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32 px-4 md:px-6">
+    <section className="relative overflow-hidden pt-20 md:pt-32 pb-8 md:pb-12 px-4 md:px-6">
       <div className="container mx-auto max-w-5xl text-center">
         <h1 className="text-3xl md:text-6xl font-medium tracking-tight leading-tight text-[#1A1A1A] mb-6 px-4 md:px-20">
           Southern Italy’s <br /> Gateway to the Future
@@ -45,7 +45,7 @@ export function Hero() {
         </div>
 
         {/* Abstract Visual */}
-        <div className="relative mx-auto max-w-4xl aspect-[2/1] rounded-3xl overflow-hidden shadow-2xl bg-[#942629]">
+        <div className="relative mx-auto max-w-4xl aspect-[2/1] rounded-3xl overflow-hidden shadow-md bg-[#942629]">
           <OrnamentalReveal />
         </div>
 

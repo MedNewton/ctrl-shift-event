@@ -75,7 +75,7 @@ export function Benefits() {
   ];
 
   return (
-    <section className="py-10 md:py-16 px-4 md:px-6 bg-[#faeaca]">
+    <section className="pt-4 md:pt-8 pb-10 md:pb-16 px-4 md:px-6 bg-[#faeaca]">
       <div className="container mx-auto max-w-5xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column */}

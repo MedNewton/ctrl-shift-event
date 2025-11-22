@@ -344,7 +344,14 @@ export function OrnamentalReveal({
     const img = new Image();
     img.src = ornamentImage;
     ornament = img;
-    void img.decode().then(() => (ornamentReady = true));
+    
+    // Use onload/onerror for more robust handling across environments
+    img.onload = () => {
+      ornamentReady = true;
+    };
+    img.onerror = (err) => {
+      console.error("OrnamentalReveal: Failed to load image", err);
+    };
 
     resize();
     window.addEventListener("resize", resize, { passive: true });
