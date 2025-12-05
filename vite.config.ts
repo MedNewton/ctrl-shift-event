@@ -1,10 +1,41 @@
 
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
+  import { imagetools } from "vite-imagetools";
   import path from 'path';
+  import viteImagemin from "vite-plugin-imagemin";
 
   export default defineConfig({
-    plugins: [react()],
+    plugins: [
+      react(), 
+      imagetools(),
+      viteImagemin({
+        // you can tweak these later; this is a reasonable starting point
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 80, // 0–100, lower = smaller
+        },
+        pngquant: {
+          quality: [0.7, 0.9], // 70–90% quality
+          speed: 4,
+        },
+        svgo: {
+          plugins: [
+            { name: "removeViewBox", active: false },
+            { name: "removeEmptyAttrs", active: true },
+          ],
+        },
+        webp: {
+          quality: 80,
+        },
+      }),
+    ],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
