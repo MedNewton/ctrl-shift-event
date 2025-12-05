@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import bgPattern from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import bgPattern from "../assets/images/decorationImage.png";
 
 export function AboutMenu() {
   const menuItems = [

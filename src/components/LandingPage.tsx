@@ -5,14 +5,10 @@ import { Benefits } from "./Benefits";
 import { FeatureSection } from "./FeatureSection";
 import { CardGrid } from "./CardGrid";
 import { Process } from "./Process";
-import { Testimonial } from "./Testimonial";
-import { Comparison } from "./Comparison";
-import { Metrics } from "./Metrics";
 import { Team } from "./Team";
 import { EventTracks } from "./EventTracks";
 import { Sponsors } from "./Sponsors";
 import { Newsletter } from "./Newsletter";
-import { FAQ } from "./FAQ";
 import { Footer } from "./Footer";
 
 export function LandingPage() {
@@ -27,15 +23,7 @@ export function LandingPage() {
         {/* Problem Section */}
         <FeatureSection type="problem" />
         <CardGrid />
-
         <EventTracks />
-
-        <div className="hidden">
-          <Testimonial />
-          <Comparison />
-          <Metrics />
-          <FAQ />
-        </div>
         <Team />
         <Sponsors />
         <Newsletter />
