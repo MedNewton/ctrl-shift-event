@@ -1,15 +1,16 @@
+import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CornerDownRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import conferenceImage from "figma:asset/6234adce7bfe8a0b3c027cb65d31d404cf14d90d.png";
-import buildImage from "figma:asset/265b6d2f1196be534c3a5b925bc05b9591563ae5.png";
-import hackathonImage from "figma:asset/5afe7a0a697d2c5b678c04d9da98b18c2f10ab71.png";
-import visionsImage from "figma:asset/a41d9e9687241d31bda39bb245e51ff5ab1b9e40.png";
-import meetupsImage from "figma:asset/ae29010419b2421b0c8521d0d0969fef352ebdb5.png";
-import sideEventsImage from "figma:asset/eb60f426a56522cebf4430f383a14f1a9d84b82f.png";
-import decorationImg from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import conferenceImage from "../assets/images/lastVersion/1.jpg";
+import buildImage from "../assets/images/lastVersion/2.png";
+import hackathonImage from "../assets/images/lastVersion/2.png";
+import visionsImage from "../assets/images/lastVersion/3.png";
+import meetupsImage from "../assets/images/lastVersion/5.jpeg";
+import sideEventsImage from "../assets/images/lastVersion/4.jpg";
+import decorationImg from "../assets/images/decorationImage.png";
 
 const steps = [
   {

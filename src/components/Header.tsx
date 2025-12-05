@@ -1,8 +1,9 @@
+import React from "react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Instagram, Linkedin, Menu, X } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import logoImg from "figma:asset/a3e50eea487109f386e5f65ac58d721db5c24981.png";
+import logoImg from "../assets/images/logo.png";
 import { motion, AnimatePresence } from "motion/react";
 
 import { AboutMenu } from "./AboutMenu";

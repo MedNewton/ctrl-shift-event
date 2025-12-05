@@ -1,9 +1,10 @@
+import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import napulethIcon from "figma:asset/68327274c12480dec85ac5dac1fa4bfbad6908b3.png";
-import ctrlShiftIcon from "figma:asset/69b3c578d27321cadaa46db1b39859ecc0b64b47.png";
-import decorationImg from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import napulethIcon from "../assets/images/napulethLogo.png";
+import ctrlShiftIcon from "../assets/images/rawLogo.png";
+import decorationImg from "../assets/images/decorationImage.png";
 
 interface StepProps {
   number: string;
@@ -206,8 +207,8 @@ export function Benefits() {
 
           {/* Right Column */}
           <div className="flex flex-col space-y-10 lg:pt-10">
-            {steps.map((step, i) => (
-              <Step key={i} {...step} />
+            {steps.map((step) => (
+              <Step {...step} />
             ))}
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { Benefits } from "./Benefits";
@@ -13,7 +14,7 @@ import { Sponsors } from "./Sponsors";
 import { Newsletter } from "./Newsletter";
 import { FAQ } from "./FAQ";
 import { Footer } from "./Footer";
-import patternImg from "figma:asset/01738829837a80df483ffcc0354599c81fe2e8eb.png";
+import patternImg from "../assets/images/layer.png";
 
 export function DarkPage() {
   return (

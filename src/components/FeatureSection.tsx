@@ -1,6 +1,7 @@
+import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import featureBg from "figma:asset/0e0f0e9a6562f7329fa716c2a1867c730eae7018.png";
-import decorationImg from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import featureBg from "../assets/images/lastVersion/stats/statsBg.png";
+import decorationImg from "../assets/images/decorationImage.png";
 
 interface FeatureCardProps {
   value: string;
@@ -73,7 +74,7 @@ export function FeatureSection({
 
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
             {cards.map((card, i) => (
-              <FeatureCard key={i} {...card} />
+              <FeatureCard {...card} />
             ))}
           </div>
         </div>

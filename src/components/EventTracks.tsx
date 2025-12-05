@@ -1,10 +1,11 @@
+import React from "react";
 import { useRef, useState, useEffect } from "react";
 import {
   motion,
   useScroll,
   AnimatePresence,
 } from "motion/react";
-import decorationImg from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import decorationImg from "../assets/images/decorationImage.png";
 
 const tracks = [
   {
