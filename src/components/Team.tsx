@@ -1,6 +1,7 @@
+import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
-import decorationImg from "figma:asset/d2bcffd6c20c92f129eb19dd0423bc988905ec9d.png";
+import decorationImg from "../assets/images/decorationImage.png";
 
 export function Team() {
   const team = [

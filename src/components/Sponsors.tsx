@@ -1,15 +1,17 @@
-import chainlink from "figma:asset/50117a58dac84626d271419e1a31bd1f467a3d6b.png";
-import neverlocal from "figma:asset/986f99163d840705d43c3d2f29e62d486943f244.png";
-import nex from "figma:asset/d86e813c97ead9d502a6b3cac4ab3f3aae3a2d4a.png";
-import quill from "figma:asset/7d0b02e19b1f6ec5248d820ae924632dcc48be81.png";
-import john from "figma:asset/ad6f552a49e32edae4848c87edd71fb31f470326.png";
-import fareimpresa from "figma:asset/71f5c3c4769119832dea33afef882a60573bd36b.png";
-import mood from "figma:asset/98339af9cb6d5e31d47a0c1a84ec6c0c562ad507.png";
-import bybit from "figma:asset/090216e45b7aa5e04668a63fac1f902785f3ccbd.png";
-import coinmarketcap from "figma:asset/e628b6fe17effbd9c3afb3e5677ea4cc0cdc9f7d.png";
-import bitget from "figma:asset/5cba3ff75fb916f52d4b33a0cc6238a8134f9d9a.png";
-import wirex from "figma:asset/803dab77fbe63d16b37c958dcf85986314a767ae.png";
-import degate from "figma:asset/f2b714506d2cfa52177961c9caf9fd17237e5bde.png";
+import React from "react";
+
+import chainlink from "../assets/images/sponsors/chainlink.png";
+import neverlocal from "../assets/images/sponsors/neverlocal.png";
+import nex from "../assets/images/sponsors/NEX logo.png";
+import quill from "../assets/images/sponsors/QuillAudits.png";
+import john from "../assets/images/sponsors/lilic.png";
+import fareimpresa from "../assets/images/sponsors/fareimpressa.png";
+import mood from "../assets/images/sponsors/mood.png";
+import bybit from "../assets/images/sponsors/bybit.png";
+import coinmarketcap from "../assets/images/sponsors/CMC.png";
+import bitget from "../assets/images/sponsors/Bitget.png";
+import wirex from "../assets/images/sponsors/Wirex.png";
+import degate from "../assets/images/sponsors/degate.png";
 
 export function Sponsors() {
   const sponsors = [
