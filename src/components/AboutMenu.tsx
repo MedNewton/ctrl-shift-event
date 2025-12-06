@@ -37,11 +37,11 @@ export function AboutMenu() {
               className="group/item cursor-pointer"
             >
               <div className="flex items-center gap-2 mb-0.5">
-                <h3 className="text-lg font-medium text-white leading-none group-hover/item:text-white/90 transition-colors">
+                <h3 className="text-lg !font-medium text-white leading-none group-hover/item:text-white/90 transition-colors">
                   {item.title}
                 </h3>
                 {item.badge && (
-                  <span className="bg-white/20 text-white text-[10px] px-2 py-0.5 rounded-full font-medium whitespace-nowrap backdrop-blur-sm">
+                  <span className="bg-white/20 text-white text-[10px] px-2 py-0.5 rounded-full font-light whitespace-nowrap backdrop-blur-sm">
                     {item.badge}
                   </span>
                 )}
