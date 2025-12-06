@@ -45,6 +45,9 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
+              loading="eager"              // do not lazy-load
+              fetchPriority="high"         // hint to browser: important image
+              decoding="async"
             />
           </motion.div>
 
@@ -63,6 +66,9 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
+              loading="eager"              // do not lazy-load
+              fetchPriority="high"         // hint to browser: important image
+              decoding="async"
             />
           </motion.div>
 
@@ -82,6 +88,9 @@ export function Hero({
                 ease: "easeInOut",
                 delay: 0.5,
               }}
+              loading="eager"              // do not lazy-load
+              fetchPriority="high"         // hint to browser: important image
+              decoding="async"
             />
           </motion.div>
 
@@ -100,6 +109,9 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
+              loading="eager"              // do not lazy-load
+              fetchPriority="high"         // hint to browser: important image
+              decoding="async"
             />
           </motion.div>
 
@@ -119,23 +131,24 @@ export function Hero({
                 ease: "easeInOut",
                 delay: 1,
               }}
+              loading="eager"              // do not lazy-load
+              fetchPriority="high"         // hint to browser: important image
+              decoding="async"
             />
           </motion.div>
 
           {/* Main Content */}
           <div className="relative z-10 flex flex-col items-center">
             <h1
-              className={`text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight leading-tight mb-6 drop-shadow-sm max-w-4xl ${
-                isDark ? "text-white" : "text-[#761E21]"
-              }`}
+              className={`text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight leading-tight mb-6 drop-shadow-sm max-w-4xl ${isDark ? "text-white" : "text-[#761E21]"
+                }`}
             >
               Southern Italy’s <br /> Gateway to the Future
             </h1>
 
             <p
-              className={`max-w-lg text-sm md:text-base mb-[40px] font-normal text-[18px] p-[0px] mt-[0px] mr-[0px] ml-[0px] ${
-                isDark ? "text-white" : "text-[#1A1A1A]"
-              }`}
+              className={`max-w-lg text-sm md:text-base mb-[40px] font-normal text-[18px] p-[0px] mt-[0px] mr-[0px] ml-[0px] ${isDark ? "text-white" : "text-[#1A1A1A]"
+                }`}
             >
               <span className="block mb-2 font-semibold">
                 8–14 June 2026 · Naples, Italy

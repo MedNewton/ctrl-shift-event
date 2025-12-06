@@ -19,8 +19,11 @@ export function DarkPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#170300] to-[#841403]" />
         <img
           src={patternImg}
-          alt=""
+          alt="Background pattern"
           className="absolute inset-0 opacity-20 w-full h-full object-cover"
+          loading="eager"              // do not lazy-load
+          fetchPriority="high"         // hint to browser: important image
+          decoding="async"
         />
         <div
           className="absolute inset-0 backdrop-blur-[6px]"
