@@ -3685,61 +3685,20 @@ html {
   display: inline;
 }
 
-.animated-gradient-text span {
-  background: linear-gradient(120deg, #DCB821, #EBD166, #E59804);
-  background-size: 300% 300%;
+.animated-gradient-text {
+  background: linear-gradient(90deg, #DCB821, #FFD586, #DCB821, #FFD586);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: inline-block;
-}
-
-.animated-gradient-text span:nth-child(1) {
-  animation: gradient-shift 6s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(2) {
-  animation: gradient-shift 8s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(3) {
-  animation: gradient-shift 5s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(4) {
-  animation: gradient-shift 7s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(5) {
-  animation: gradient-shift 9s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(6) {
-  animation: gradient-shift 6.5s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(7) {
-  animation: gradient-shift 7.5s ease-in-out infinite;
-}
-
-.animated-gradient-text span:nth-child(8) {
-  animation: gradient-shift 5.5s ease-in-out infinite;
+  animation: gradient-shift 4s ease-in-out infinite;
 }
 
 @keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 60%;
+  0%, 100% {
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 50% 100%;
-  }
-  75% {
-    background-position: 10% 40%;
-  }
-  100% {
-    background-position: 0% 50%;
+    background-position: 100% 0%;
   }
 }
