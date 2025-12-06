@@ -11,25 +11,26 @@ import { AboutMenu } from "./AboutMenu";
 const SOCIAL_LINKS = [
   {
     name: "X",
-    icon: <FaXTwitter />,
+    Icon: FaXTwitter,
     href: "#",
   },
   {
     name: "Instagram",
-    icon: <FaInstagram />,
+    Icon: FaInstagram,
     href: "#",
   },
   {
     name: "Linkedin",
-    icon: <FaLinkedin />,
+    Icon: FaLinkedin,
     href: "#",
   },
   {
     name: "Telegram",
-    icon: <FaTelegram />,
+    Icon: FaTelegram,
     href: "#",
   },
-];
+] as const;
+
 export function Header({
   theme = "light",
 }: {
@@ -84,18 +85,17 @@ export function Header({
           </div>
         </nav>
         <div className="hidden md:flex items-center gap-0">
-          {SOCIAL_LINKS.map((social) => (
+          {SOCIAL_LINKS.map(({ name, href, Icon }) => (
             <a
-              key={social.name}
-              href={social.href}
-              className={`flex h-10 w-10 items-center justify-center rounded-md bg-transparent transition-colors [&_svg]:h-5 [&_svg]:w-5 ${
-                isDark 
-                  ? "text-white hover:text-[#DCB821]" 
-                  : "text-[#942629] hover:text-[#DCB821]"
-              }`}
-              aria-label={social.name}
+              key={name}
+              href={href}
+              className="group flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
+              aria-label={name}
             >
-              {social.icon}
+              <Icon
+                className={`h-5 w-5 transition-colors ${isDark ? "text-white" : "text-[#942629]"
+                  } group-hover:text-[#DCB821]`}
+              />
             </a>
           ))}
         </div>
@@ -181,20 +181,23 @@ export function Header({
                 </a>
               </nav>
 
-              <div className="mt-auto">
-                <div className="flex md:hidden w-full items-center gap-0">
-                  {SOCIAL_LINKS.map((social) => (
+              <div className="mx-auto">
+                <div className="flex md:hidden items-center gap-0">
+                  {SOCIAL_LINKS.map(({ name, href, Icon }) => (
                     <a
-                      key={social.name}
-                      href={social.href}
-                      className="flex h-10 w-10 items-center justify-center rounded-md bg-transparent text-white hover:text-[#DCB821] transition-colors [&_svg]:h-5 [&_svg]:w-5"
-                      aria-label={social.name}
+                      key={name}
+                      href={href}
+                      className="group flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
+                      aria-label={name}
                     >
-                      {social.icon}
+                      <Icon
+                        className="h-5 w-5 text-white transition-colors group-hover:text-[#DCB821]"
+                      />
                     </a>
                   ))}
                 </div>
               </div>
+
             </div>
           </motion.div>
         )}
