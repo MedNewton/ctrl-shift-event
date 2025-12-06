@@ -194,7 +194,7 @@ export function Header({
                       aria-label={name}
                     >
                       <Icon
-                        className="h-5 w-5 text-white transition-colors group-hover:text-[#DCB821]"
+                        className="h-6 w-6 text-white transition-colors group-hover:text-[#DCB821]"
                       />
                     </a>
                   ))}
