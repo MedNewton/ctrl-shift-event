@@ -184,14 +184,7 @@ export function Header({
                     <a
                       key={social.name}
                       href={social.href}
-                      className="
-                        group
-                        flex h-10 w-10 items-center justify-center
-                        rounded-md bg-transparent
-                        text-white
-                        transition-colors
-                        [&_svg]:h-5 [&_svg]:w-5
-                      "
+                      className="flex h-10 w-10 items-center justify-center rounded-md bg-transparent text-white hover:text-[#DCB821] transition-colors [&_svg]:h-5 [&_svg]:w-5"
                       aria-label={social.name}
                     >
                       {social.icon}
