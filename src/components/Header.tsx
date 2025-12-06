@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { FaXTwitter, FaInstagram, FaLinkedin, FaTelegram, FaBars, FaX } from "react-icons/fa6";
+import { FaXTwitter, FaInstagram, FaLinkedin, FaBars, FaX } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logoImg from "../assets/images/logo.webp";
 import { motion, AnimatePresence } from "motion/react";
@@ -26,7 +28,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "Telegram",
-    Icon: FaTelegram,
+    Icon: FaTelegramPlane,
     href: "#",
   },
 ] as const;
@@ -89,16 +91,17 @@ export function Header({
             <a
               key={name}
               href={href}
-              className="group flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
+              className="header-social-link flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
               aria-label={name}
             >
               <Icon
-                className={`h-5 w-5 transition-colors ${isDark ? "text-white" : "text-[#942629]"
-                  } group-hover:text-[#DCB821]`}
+                className={`header-social-icon h-6 w-6 transition-colors ${isDark ? "text-white" : "text-[#942629]"
+                  }`}
               />
             </a>
           ))}
         </div>
+
 
         {/* Mobile Menu Button */}
         <button
