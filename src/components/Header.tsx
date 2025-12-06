@@ -1,13 +1,16 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { FaXTwitter, FaInstagram, FaLinkedin, FaBars, FaX } from "react-icons/fa6";
+import {
+  FaXTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaBars,
+  FaX,
+} from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
-
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logoImg from "../assets/images/logo.webp";
 import { motion, AnimatePresence } from "motion/react";
-
 import { AboutMenu } from "./AboutMenu";
 
 const SOCIAL_LINKS = [
@@ -41,18 +44,30 @@ export function Header({
   const isDark = theme === "dark";
   const [isOpen, setIsOpen] = useState(false);
 
+  // which desktop icon is hovered
+  const [hoveredDesktopIcon, setHoveredDesktopIcon] = useState<string | null>(
+    null,
+  );
+  // which mobile icon is hovered (desktop and mobile are rendered in different trees)
+  const [hoveredMobileIcon, setHoveredMobileIcon] = useState<string | null>(
+    null,
+  );
+
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b backdrop-blur-md px-4 md:px-6 ${isDark
-        ? "bg-transparent border-white/10 text-white"
-        : "bg-[#faeaca]/80 border-black/5"
-        }`}
+      className={`sticky top-0 z-50 w-full border-b backdrop-blur-md px-4 md:px-6 ${
+        isDark
+          ? "bg-transparent border-white/10 text-white"
+          : "bg-[#faeaca]/80 border-black/5"
+      }`}
     >
       <div className="container mx-auto max-w-5xl flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <a
             href="/"
-            className={`block transition-opacity hover:opacity-80 ${isDark ? "text-white" : "text-black"}`}
+            className={`block transition-opacity hover:opacity-80 ${
+              isDark ? "text-white" : "text-black"
+            }`}
           >
             <ImageWithFallback
               src={logoImg}
@@ -61,23 +76,26 @@ export function Header({
             />
           </a>
         </div>
+
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="/"
-            className={`relative text-base font-medium hover:opacity-70 transition-opacity after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${isDark
-              ? "text-white after:bg-white"
-              : "text-[#942629] after:bg-[#942629]"
-              }`}
+            className={`relative text-base font-medium hover:opacity-70 transition-opacity after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+              isDark
+                ? "text-white after:bg-white"
+                : "text-[#942629] after:bg-[#942629]"
+            }`}
           >
             Home
           </a>
           <div className="relative group">
             <a
               href="#about"
-              className={`relative text-base font-medium hover:opacity-70 transition-opacity flex items-center gap-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${isDark
-                ? "text-white after:bg-white"
-                : "text-[#942629] after:bg-[#942629]"
-                }`}
+              className={`relative text-base font-medium hover:opacity-70 transition-opacity flex items-center gap-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+                isDark
+                  ? "text-white after:bg-white"
+                  : "text-[#942629] after:bg-[#942629]"
+              }`}
             >
               About
             </a>
@@ -86,24 +104,32 @@ export function Header({
             </div>
           </div>
         </nav>
+
+        {/* DESKTOP SOCIAL ICONS */}
         <div className="hidden md:flex items-center gap-0">
-          {SOCIAL_LINKS.map(({ name, href, Icon }) => (
-            <a
-              key={name}
-              href={href}
-              className="header-social-link flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
-              aria-label={name}
-            >
-              <Icon
-                className={`header-social-icon h-6 w-6 transition-colors ${isDark ? "text-white" : "text-[#942629]"
-                  }`}
-              />
-            </a>
+          {SOCIAL_LINKS.map(({ name, href, Icon }) => {
+            const isHovered = hoveredDesktopIcon === name;
+            const baseColor = isDark ? "#ffffff" : "#942629";
 
-          ))}
+            return (
+              <a
+                key={name}
+                href={href}
+                className="flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
+                aria-label={name}
+                onMouseEnter={() => setHoveredDesktopIcon(name)}
+                onMouseLeave={() => setHoveredDesktopIcon(null)}
+              >
+                <Icon
+                  className="h-6 w-6 transition-colors"
+                  style={{
+                    color: isHovered ? "#DCB821" : baseColor,
+                  }}
+                />
+              </a>
+            );
+          })}
         </div>
-
-
 
         {/* Mobile Menu Button */}
         <button
@@ -186,23 +212,32 @@ export function Header({
                 </a>
               </nav>
 
+              {/* MOBILE SOCIAL ICONS */}
               <div className="mx-auto">
                 <div className="flex md:hidden items-center gap-0">
-                  {SOCIAL_LINKS.map(({ name, href, Icon }) => (
-                    <a
-                      key={name}
-                      href={href}
-                      className="group flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
-                      aria-label={name}
-                    >
-                      <Icon
-                        className="h-6 w-6 text-white transition-colors group-hover:text-[#DCB821]"
-                      />
-                    </a>
-                  ))}
+                  {SOCIAL_LINKS.map(({ name, href, Icon }) => {
+                    const isHovered = hoveredMobileIcon === name;
+
+                    return (
+                      <a
+                        key={name}
+                        href={href}
+                        className="flex h-10 w-10 items-center justify-center rounded-md bg-transparent"
+                        aria-label={name}
+                        onMouseEnter={() => setHoveredMobileIcon(name)}
+                        onMouseLeave={() => setHoveredMobileIcon(null)}
+                      >
+                        <Icon
+                          className="h-6 w-6 transition-colors"
+                          style={{
+                            color: isHovered ? "#DCB821" : "#ffffff",
+                          }}
+                        />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
-
             </div>
           </motion.div>
         )}
