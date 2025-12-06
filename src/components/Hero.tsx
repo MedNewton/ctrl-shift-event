@@ -134,10 +134,10 @@ export function Hero({
           {/* Main Content */}
           <div className="relative z-10 flex flex-col items-center">
             <h1
-              className={`text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight leading-tight mb-6 drop-shadow-sm max-w-4xl ${isDark ? "text-white" : "text-[#761E21]"
+              className={`animated-gradient-text text-4xl md:text-5xl lg:text-[56px] font-medium tracking-tight leading-tight mb-6 drop-shadow-sm max-w-4xl ${isDark ? "text-white" : "text-[#761E21]"
                 }`}
             >
-              Southern Italy’s <br /> Gateway to the Future
+              <span>Southern</span> <span>Italy’s</span> <br /> <span>Gateway</span> <span>to</span> <span>the</span> <span>Future</span>
             </h1>
 
             <p
