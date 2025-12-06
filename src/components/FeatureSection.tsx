@@ -29,7 +29,7 @@ function FeatureCard({ value, label, subtext }: FeatureCardProps) {
 
       {/* content */}
       <div className="relative z-10">
-        <h3 className="font-serif text-4xl md:text-5xl font-medium text-white drop-shadow-sm mb-4">
+        <h3 className="font-serif text-4xl md:text-5xl font-medium text-white mb-4">
           {value}
         </h3>
         <p className="!text-[#DCB821] font-medium text-lg leading-tight max-w-[200px]">

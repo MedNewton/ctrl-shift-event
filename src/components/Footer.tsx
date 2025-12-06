@@ -174,7 +174,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 w-full border-t border-gray-100 flex flex-col md:flex-row justify-center items-center text-xs text-gray-400">
+        <div className="mt-12 pt-8 pb-0 w-full border-t border-gray-100 flex flex-col md:flex-row justify-center items-center text-xs text-gray-400">
           <p>© 2025 ctrl/shift. All rights reserved.</p>
         </div>
       </div>
