@@ -21,9 +21,7 @@ export function DarkPage() {
           src={patternImg}
           alt="Background pattern"
           className="absolute inset-0 opacity-20 w-full h-full object-cover"
-          loading="eager"              // do not lazy-load
-          fetchPriority="high"         // hint to browser: important image
-          decoding="async"
+          fetchPriority="high"
         />
         <div
           className="absolute inset-0 backdrop-blur-[6px]"

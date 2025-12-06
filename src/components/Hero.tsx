@@ -45,9 +45,7 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              loading="eager"              // do not lazy-load
-              fetchPriority="high"         // hint to browser: important image
-              decoding="async"
+              fetchPriority="high"
             />
           </motion.div>
 
@@ -66,9 +64,7 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              loading="eager"              // do not lazy-load
-              fetchPriority="high"         // hint to browser: important image
-              decoding="async"
+              fetchPriority="high"
             />
           </motion.div>
 
@@ -88,9 +84,7 @@ export function Hero({
                 ease: "easeInOut",
                 delay: 0.5,
               }}
-              loading="eager"              // do not lazy-load
-              fetchPriority="high"         // hint to browser: important image
-              decoding="async"
+              fetchPriority="high"
             />
           </motion.div>
 
@@ -109,9 +103,7 @@ export function Hero({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              loading="eager"              // do not lazy-load
-              fetchPriority="high"         // hint to browser: important image
-              decoding="async"
+              fetchPriority="high"
             />
           </motion.div>
 
@@ -131,9 +123,7 @@ export function Hero({
                 ease: "easeInOut",
                 delay: 1,
               }}
-              loading="eager"              // do not lazy-load
-              fetchPriority="high"         // hint to browser: important image
-              decoding="async"
+              fetchPriority="high"
             />
           </motion.div>
 
