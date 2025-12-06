@@ -3589,6 +3589,7 @@ html {
 
 /* Inner button */
 .hero-btn {
+  width: 15rem !important;
   position: relative;
   z-index: 1;
   display: block;
