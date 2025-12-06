@@ -14,9 +14,9 @@ import patternImg from "../assets/images/layer.webp";
 
 export function DarkPage() {
   return (
-    <div className="min-h-screen relative font-sans selection:bg-orange-200 selection:text-black [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_p]:text-white [&_span]:text-white [&_a:not([class*='button'])]:text-white [&_li]:text-white">
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#170300] to-[#841403]" />
+    <div className="min-h-screen max-w-[100vw] overflow-x-hidden relative font-sans selection:bg-orange-200 selection:text-black [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_p]:text-white [&_span]:text-white [&_a:not([class*='button'])]:text-white [&_li]:text-white">
+      <div className="fixed w-screen max-w-[100vw] overflow-hidden inset-0 -z-10">
+        <div className="absolute max-w-[100vw] overflow-x-hidden inset-0 bg-gradient-to-b from-[#170300] to-[#841403]" />
         <img
           src={patternImg}
           alt="Background pattern"

@@ -27,8 +27,8 @@ export function Hero({
   const yCrest = useTransform(scrollY, [0, 500], [0, -40]); // Moves up slightly
 
   return (
-    <section className="w-full mt-4 md:mt-6 mb-12 md:px-6 overflow-visible px-[12px] py-[0px] relative">
-      <div className="container mx-auto max-w-7xl relative">
+    <section className="w-full max-w-[100vw] overflow-hidden mt-4 md:mt-6 mb-12 md:px-6 px-[12px] py-[0px] relative">
+      <div className="container mx-auto max-w-full relative">
         <div className="relative h-[80vh] w-full flex flex-col items-center justify-center text-center px-4 md:px-0">
           {/* Floating Crest - Top Center */}
           <motion.div
