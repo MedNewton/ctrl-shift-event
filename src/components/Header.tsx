@@ -11,26 +11,25 @@ import { AboutMenu } from "./AboutMenu";
 const SOCIAL_LINKS = [
   {
     name: "X",
-    icon: <FaXTwitter className="h-5 w-5" />,
+    icon: <FaXTwitter />,
     href: "#",
   },
   {
     name: "Instagram",
-    icon: <FaInstagram className="h-5 w-5" />,
+    icon: <FaInstagram />,
     href: "#",
   },
   {
     name: "Linkedin",
-    icon: <FaLinkedin className="h-5 w-5" />,
+    icon: <FaLinkedin />,
     href: "#",
   },
   {
     name: "Telegram",
-    icon: <FaTelegram className="h-5 w-5" />,
+    icon: <FaTelegram />,
     href: "#",
   },
 ];
-
 export function Header({
   theme = "light",
 }: {
@@ -183,7 +182,7 @@ export function Header({
               </nav>
 
               <div className="mt-auto">
-                <div className="flex md:hidden items-center gap-0">
+                <div className="flex md:hidden w-full items-center gap-0">
                   {SOCIAL_LINKS.map((social) => (
                     <a
                       key={social.name}
