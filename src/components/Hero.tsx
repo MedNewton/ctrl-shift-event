@@ -8,7 +8,11 @@ import sunImg from "../assets/images/sun.webp";
 import leafImg from "../assets/images/leaf.webp";
 import crestImg from "../assets/images/relic.webp";
 import bgImg from "../assets/images/layer.webp";
+import btnFrame from "../assets/images/btnFrame.webp";
+import btnBg from "../assets/images/btnBg.webp";
 import { motion, useScroll, useTransform } from "motion/react";
+
+import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 
 export function Hero({
   theme = "light",
@@ -149,26 +153,75 @@ export function Hero({
 
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button
-                className="group relative h-12 w-56 cursor-pointer rounded-md px-0 text-lg font-semibold border-0 transition-all duration-300 text-white hover:shadow-[0_0_24px_rgba(220,184,33,0.6)]"
+                className="
+                  hidden group relative h-12 w-56 cursor-pointer rounded-md px-0 text-lg font-medium border-0
+                  transition-all duration-300 text-white
+                "
                 style={{
                   background:
                     "radial-gradient(50% 50% at 50% 50%, #841403 0%, #841403 100%)",
                   boxShadow:
-                    "inset 0 -4px 2px 0 rgba(0, 0, 0, 0.25), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25)",
+                    "inset 0 -4px 2px 0 rgba(0, 0, 0, 0.25), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25)", // your inner shadow
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden rounded-md flex items-center justify-center">
-                  <span className="relative flex translate-y-0 items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-y-[150%] text-[16px]">
+                {/* 1) subtle golden glow on hover (outer) */}
+                <span
+                  aria-hidden
+                  className="
+      pointer-events-none absolute inset-0 rounded-md
+      opacity-0 group-hover:opacity-100
+      transition-opacity duration-300
+      z-0
+    "
+                  style={{
+                    boxShadow: "0 0 24px rgba(220,184,33,0.6)",
+                  }}
+                />
+
+
+                {/* 3) thick inner gold border on hover (solid, no gradient hacks) */}
+
+
+                {/* 4) content (unchanged) */}
+                <div className="relative z-30 w-full h-full overflow-hidden rounded-md flex items-center justify-center">
+                  <span className="relative flex translate-y-0 items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-y-[150%] font-medium text-[16px]">
                     Get your tickets
                   </span>
-                  <span className="absolute inset-0 flex -translate-y-[150%] items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-y-0 text-[16px]">
+                  <span className="absolute inset-0 flex -translate-y-[150%] items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-y-0 font-medium text-[16px]">
                     Get your tickets
                   </span>
                 </div>
               </Button>
+              <div className="hero-btn-wrapper">
+                <button className="hero-btn">
+                  Get your tickets
+                </button>
+                <div className="hero-btn-border" aria-hidden="true" />
+              </div>
+              <div className="hero-btn-wrapper">
+                <button className="hero-btn">
+                  <div className="relative w-full h-full overflow-hidden rounded-md flex items-center justify-center">
+
+                    {/* Ghost element for sizing */}
+                    <span className="invisible flex items-center justify-center gap-2 font-medium text-[16px]">
+                      <span>Become a sponsor</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+
+                    {/* Animated content */}
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="relative mr-2 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:mr-0 group-hover:max-w-0 group-hover:opacity-0 font-medium text-[16px]">
+                        Become a sponsor
+                      </span>
+                      <ArrowRight className="relative h-4 w-4 transition-all duration-300 group-hover:animate-pulse-scale" />
+                    </span>
+                  </div>
+                </button>
+                <div className="hero-btn-border" aria-hidden="true" />
+              </div>
               <Button
                 asChild
-                className="group relative h-12 w-56 cursor-pointer rounded-md px-0 text-lg font-semibold border-0 transition-all duration-300 text-white hover:shadow-[0_0_24px_rgba(220,184,33,0.6)]"
+                className="hidden group relative h-12 w-56 cursor-pointer rounded-md px-0 text-lg font-medium border-0 transition-all duration-300 text-white hover:shadow-[0_0_24px_rgba(220,184,33,0.6)]"
                 style={{
                   background:
                     "radial-gradient(50% 50% at 50% 50%, #841403 0%, #841403 100%)",
@@ -182,15 +235,16 @@ export function Hero({
                   rel="noopener noreferrer"
                 >
                   <div className="relative w-full h-full overflow-hidden rounded-md flex items-center justify-center">
+
                     {/* Ghost element for sizing */}
-                    <span className="invisible flex items-center justify-center gap-2">
+                    <span className="invisible flex items-center justify-center gap-2 font-medium text-[16px]">
                       <span>Become a sponsor</span>
                       <ArrowRight className="h-4 w-4" />
                     </span>
 
                     {/* Animated content */}
                     <span className="absolute inset-0 flex items-center justify-center">
-                      <span className="relative mr-2 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:mr-0 group-hover:max-w-0 group-hover:opacity-0 text-[16px]">
+                      <span className="relative mr-2 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:mr-0 group-hover:max-w-0 group-hover:opacity-0 font-medium text-[16px]">
                         Become a sponsor
                       </span>
                       <ArrowRight className="relative h-4 w-4 transition-all duration-300 group-hover:animate-pulse-scale" />

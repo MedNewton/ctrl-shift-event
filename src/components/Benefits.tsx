@@ -44,7 +44,7 @@ function Step({
 
   return (
     <div className="flex gap-8 items-start group">
-      <span className="text-xs font-medium !text-[#FAD021] mt-1.5 font-bold text-[14px]">
+      <span className="text-xs font-medium !text-[#FAD021] mt-1.5 text-[14px]">
         {number}
       </span>
       <div>
@@ -54,9 +54,15 @@ function Step({
         <p className="text-white/80 leading-relaxed max-w-md mb-[12px] mt-[0px] mr-[0px] ml-[0px]">
           {description}
         </p>
+        <div className="hero-btn-wrapper">
+                <button className="hero-btn">
+                  {buttonText}
+                </button>
+                <div className="hero-btn-border" aria-hidden="true" />
+              </div>
         <Button
           asChild={!!link}
-          className="group/btn relative h-12 w-56 cursor-pointer overflow-hidden rounded-md px-0 text-base font-semibold border-0 hover:opacity-90 transition-opacity text-white"
+          className="hidden group/btn relative h-12 w-56 cursor-pointer overflow-hidden rounded-md px-0 text-base font-semibold border-0 hover:opacity-90 transition-opacity text-white"
           style={{
             background: "radial-gradient(50% 50% at 50% 50%, #942629 0%, #942629 100%)",
             boxShadow: "inset 0 -4px 2px 0 rgba(0, 0, 0, 0.25), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25)"
@@ -129,7 +135,7 @@ export function Benefits() {
               </span>{" "}
               <br />
               to{" "}
-              <span className="!text-[#942629] inline-flex items-center gap-2">
+              <span className="!text-[#DCB821] inline-flex items-center gap-2">
                 ctrl/shift
                 <ImageWithFallback
                   src={ctrlShiftIcon}

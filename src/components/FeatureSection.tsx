@@ -9,13 +9,25 @@ interface FeatureCardProps {
   subtext?: string;
 }
 
-function FeatureCard({
-  value,
-  label,
-  subtext,
-}: FeatureCardProps) {
+function FeatureCard({ value, label, subtext }: FeatureCardProps) {
   return (
-    <div className="relative overflow-hidden rounded-3xl px-8 py-6 aspect-square md:aspect-auto md:min-h-[12rem] flex flex-col justify-center items-center text-center bg-[linear-gradient(180deg,rgba(148,38,41,0.1)_0%,rgba(148,38,41,0.80)_100%)] backdrop-blur-[12px] border border-[#DCB821] shadow-xl transition-transform hover:scale-[1.02] duration-300 group">
+    <div
+      className="
+        relative overflow-hidden rounded-3xl px-8 py-6
+        aspect-square md:aspect-auto md:min-h-[12rem]
+        flex flex-col justify-center items-center text-center
+        transition-transform duration-300 hover:scale-[1.02]
+        group
+      "
+      style={{
+        background: "radial-gradient(50% 50% at 50% 50%, #841403 0%, #841403 100%)",
+        boxShadow: "0 -6px 2px 0 rgba(229, 152, 4, 0.25) inset, 0 -10px 2px 0 rgba(229, 152, 4, 0.1) inset"
+      }}
+    >
+      {/* inner shadows + bottom glow */}
+
+
+      {/* content */}
       <div className="relative z-10">
         <h3 className="font-serif text-4xl md:text-5xl font-medium text-white drop-shadow-sm mb-4">
           {value}
@@ -32,6 +44,7 @@ function FeatureCard({
     </div>
   );
 }
+
 
 export function FeatureSection({
   type,

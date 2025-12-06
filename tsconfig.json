@@ -4,12 +4,14 @@
       "module": "ESNext",
       "moduleResolution": "bundler",
       "jsx": "react-jsx",
-  
       "strict": true,
       "noEmit": true,
       "allowJs": true,
       "checkJs": false,
-  
+      "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
       "esModuleInterop": true,
       "skipLibCheck": true,
       "resolveJsonModule": true,
