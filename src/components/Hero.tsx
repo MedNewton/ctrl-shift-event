@@ -1,13 +1,13 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import decorationImg from "../assets/images/decorationImage.png";
-import columnImg from "../assets/images/column.png";
-import starImg from "../assets/images/star.png";
-import sunImg from "../assets/images/sun.png";
-import leafImg from "../assets/images/leaf.png";
-import crestImg from "../assets/images/relic.png";
-import bgImg from "../assets/images/layer.png";
+import decorationImg from "../assets/images/decorationImage.webp";
+import columnImg from "../assets/images/column.webp";
+import starImg from "../assets/images/star.webp";
+import sunImg from "../assets/images/sun.webp";
+import leafImg from "../assets/images/leaf.webp";
+import crestImg from "../assets/images/relic.webp";
+import bgImg from "../assets/images/layer.webp";
 import { motion, useScroll, useTransform } from "motion/react";
 
 export function Hero({

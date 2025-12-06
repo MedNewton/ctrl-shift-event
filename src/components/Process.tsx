@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from "motion/react";
 import { CornerDownRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import conferenceImage from "../assets/images/lastVersion/1.jpg";
-import buildImage from "../assets/images/lastVersion/2.png";
-import hackathonImage from "../assets/images/lastVersion/2.png";
-import visionsImage from "../assets/images/lastVersion/3.png";
-import meetupsImage from "../assets/images/lastVersion/5.jpeg";
-import sideEventsImage from "../assets/images/lastVersion/4.jpg";
-import decorationImg from "../assets/images/decorationImage.png";
+import conferenceImage from "../assets/images/lastVersion/1.webp";
+import buildImage from "../assets/images/lastVersion/2.webp";
+import hackathonImage from "../assets/images/lastVersion/2.webp";
+import visionsImage from "../assets/images/lastVersion/3.webp";
+import meetupsImage from "../assets/images/lastVersion/5.webp";
+import sideEventsImage from "../assets/images/lastVersion/4.webp";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 const steps = [
   {

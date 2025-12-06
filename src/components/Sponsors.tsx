@@ -1,17 +1,17 @@
 import React from "react";
 
-import chainlink from "../assets/images/sponsors/chainlink.png";
-import neverlocal from "../assets/images/sponsors/neverlocal.png";
-import nex from "../assets/images/sponsors/NEX logo.png";
-import quill from "../assets/images/sponsors/QuillAudits.png";
-import john from "../assets/images/sponsors/lilic.png";
-import fareimpresa from "../assets/images/sponsors/fareimpressa.png";
-import mood from "../assets/images/sponsors/mood.png";
-import bybit from "../assets/images/sponsors/bybit.png";
-import coinmarketcap from "../assets/images/sponsors/CMC.png";
-import bitget from "../assets/images/sponsors/Bitget.png";
-import wirex from "../assets/images/sponsors/Wirex.png";
-import degate from "../assets/images/sponsors/degate.png";
+import chainlink from "../assets/images/sponsors/chainlink.webp";
+import neverlocal from "../assets/images/sponsors/neverlocal.webp";
+import nex from "../assets/images/sponsors/NEX logo.webp";
+import quill from "../assets/images/sponsors/QuillAudits.webp";
+import john from "../assets/images/sponsors/lilic.webp";
+import fareimpresa from "../assets/images/sponsors/fareimpressa.webp";
+import mood from "../assets/images/sponsors/mood.webp";
+import bybit from "../assets/images/sponsors/bybit.webp";
+import coinmarketcap from "../assets/images/sponsors/CMC.webp";
+import bitget from "../assets/images/sponsors/Bitget.webp";
+import wirex from "../assets/images/sponsors/Wirex.webp";
+import degate from "../assets/images/sponsors/degate.webp";
 
 export function Sponsors() {
   const sponsors = [

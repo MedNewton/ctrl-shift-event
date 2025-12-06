@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import featureBg from "../assets/images/lastVersion/stats/statsBg.png";
-import decorationImg from "../assets/images/decorationImage.png";
+import featureBg from "../assets/images/lastVersion/stats/statsBg.webp";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 interface FeatureCardProps {
   value: string;

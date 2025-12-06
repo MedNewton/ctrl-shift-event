@@ -5,7 +5,7 @@ import {
   useScroll,
   AnimatePresence,
 } from "motion/react";
-import decorationImg from "../assets/images/decorationImage.png";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 const tracks = [
   {

@@ -10,7 +10,7 @@ import { EventTracks } from "./EventTracks";
 import { Sponsors } from "./Sponsors";
 import { Newsletter } from "./Newsletter";
 import { Footer } from "./Footer";
-import patternImg from "../assets/images/layer.png";
+import patternImg from "../assets/images/layer.webp";
 
 export function DarkPage() {
   return (

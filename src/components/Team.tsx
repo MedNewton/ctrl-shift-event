@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
-import decorationImg from "../assets/images/decorationImage.png";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 export function Team() {
   const team = [

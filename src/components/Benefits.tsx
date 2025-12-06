@@ -2,9 +2,9 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import napulethIcon from "../assets/images/napulethLogo.png";
-import ctrlShiftIcon from "../assets/images/rawLogo.png";
-import decorationImg from "../assets/images/decorationImage.png";
+import napulethIcon from "../assets/images/napulethLogo.webp";
+import ctrlShiftIcon from "../assets/images/rawLogo.webp";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 interface StepProps {
   number: string;

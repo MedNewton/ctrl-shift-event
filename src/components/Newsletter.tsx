@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import decorationImg from "../assets/images/decorationImage.png";
+import decorationImg from "../assets/images/decorationImage.webp";
 
 export function Newsletter() {
   return (

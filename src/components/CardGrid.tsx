@@ -3,11 +3,11 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import quantumImg from "../assets/images/lastVersion/stats/quantum.webp";
 import web3Img from "../assets/images/lastVersion/stats/web3.webp";
 import networkingImg from "../assets/images/lastVersion/stats/networking.webp";
-import aiImg from "../assets/images/lastVersion/stats/ai.jpg";
-import lawImg from "../assets/images/lastVersion/stats/law.jpg";
-import artImg from "../assets/images/lastVersion/stats/art.jpg";
-import foodImg from "../assets/images/lastVersion/stats/food.jpg";
-import institutionsImg from "../assets/images/lastVersion/stats/institutions.jpg";
+import aiImg from "../assets/images/lastVersion/stats/ai.webp";
+import lawImg from "../assets/images/lastVersion/stats/law.webp";
+import artImg from "../assets/images/lastVersion/stats/art.webp";
+import foodImg from "../assets/images/lastVersion/stats/food.webp";
+import institutionsImg from "../assets/images/lastVersion/stats/institutions.webp";
 
 const cards = [
   {
